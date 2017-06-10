@@ -40,6 +40,12 @@ sourceSets {
 	}
 }
 
+run{
+    if (project.hasProperty("appArgs")) {
+        args Eval.me(appArgs)
+    }
+}
+
 // Define the main class for the application
-mainClassName = 'osu.beatmap.OSUbm'
+mainClassName = 'osu.beatmap.BeatmapUtil'
 

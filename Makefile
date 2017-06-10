@@ -3,4 +3,4 @@ build-project:
 clean:
 	gradle clean
 run:
-	gradle run
+	gradle run -PappArgs="['/ntfs/d/osu/Songs']"
