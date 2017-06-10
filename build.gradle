@@ -21,11 +21,17 @@ repositories {
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:21.0'
+    //compile 'com.google.guava:guava:21.0'
+	compile('org.slick2d:slick2d-core:1.0.2') {
+		exclude group: 'org.lwjgl.lwjgl', module: 'lwjgl'
+		exclude group: 'org.jcraft', module: 'jorbis'
+		exclude group: 'javax.jnlp', module: 'jnlp-api'
+	}
 
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
+
 sourceSets {
 	main {
 		java {
